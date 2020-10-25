@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      config:
+        server-addr: http://localhost:8848
+        group: test
+        file-extension: yaml

@@ -1,0 +1,23 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+      config:
+        server-addr: http://localhost:8848
+
+# Dubbo
+dubbo:
+  application:
+    name: provider
+  scan:
+    base-packages: com.example.cloudprovider.service.impl
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://127.0.0.1:8848

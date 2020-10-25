@@ -1,0 +1,36 @@
+#server:
+#  port: 8011
+#spring:
+#  application:
+#    name: consumer
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: http://localhost:8848
+#      config:
+#        server-addr: http://localhost:8848
+##        group: test
+##        file-extension: yaml
+#
+#type: test
+#
+## Dubbo
+#dubbo:
+#  application:
+#    name: consumer
+#  protocol:
+#    name: dubbo
+#    port: -1
+#  registry:
+#    address: spring-cloud://localhost
+#  cloud:
+#    subscribed-services: provider
+#  consumer:
+#    check: false
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719

@@ -1,0 +1,20 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    gateway:
+      routes:
+        - id: consumer_route
+          #uri后面指定消费者的服务id
+          uri: lb://consumer
+          predicates:
+            #匹配条件
+            - Path=/**
